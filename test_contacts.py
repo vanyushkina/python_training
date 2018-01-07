@@ -12,7 +12,7 @@ def is_alert_present(wd):
 
 class test_contacts(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
+        self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
     
     def test_test_contacts(self):
@@ -44,6 +44,7 @@ class test_contacts(unittest.TestCase):
             wd.find_element_by_xpath("//div[@id='content']/form/select[5]//option[2]").click()
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         wd.find_element_by_link_text("home").click()
+        wd.find_element_by_link_text("Logout").click()
         self.assertTrue(success)
     
     def tearDown(self):

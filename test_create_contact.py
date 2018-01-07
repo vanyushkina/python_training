@@ -16,7 +16,7 @@ class test_contacts(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
-    
+
     def test__add_contacts(self):
         wd = self.wd
         self.open_home_page(wd)
@@ -67,6 +67,7 @@ class test_contacts(unittest.TestCase):
 
     def tearDown(self):
         self.wd.quit()
+
 
 if __name__ == '__main__':
     unittest.main()

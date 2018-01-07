@@ -10,15 +10,15 @@ def is_alert_present(wd):
     except:
         return False
 
-class test_add_group(unittest.TestCase):
+class test(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver(capabilities={"marionette": False})
+        self.wd = WebDriver()
         self.wd.implicitly_wait(60)
     
-    def test_test_add_group(self):
+    def test_test(self):
         success = True
         wd = self.wd
-        wd.get("http://localhost/addressbook/")
+        wd.get("http://localhost/addressbook/group.php")
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys("admin")
@@ -30,15 +30,15 @@ class test_add_group(unittest.TestCase):
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys("test group")
+        wd.find_element_by_name("group_name").send_keys("afg")
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("test")
+        wd.find_element_by_name("group_header").send_keys("sg")
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("create a test group")
+        wd.find_element_by_name("group_footer").send_keys("qg")
         wd.find_element_by_name("submit").click()
-        wd.find_element_by_link_text("groups").click()
+        wd.find_element_by_link_text("group page").click()
         wd.find_element_by_link_text("Logout").click()
         self.assertTrue(success)
     

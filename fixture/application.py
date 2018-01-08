@@ -57,6 +57,7 @@ class Application:
         self.wd.quit()
 
 
+###############################################################################################
 class Application_C:
     def __init__(self):
         self.wd = WebDriver(capabilities={"marionette": False})

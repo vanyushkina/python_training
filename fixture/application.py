@@ -34,3 +34,4 @@ class Application_C:
 
     def destroy(self):
         self.wd.quit()
+        

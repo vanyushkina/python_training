@@ -34,13 +34,6 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         self.return_to_home_page()
 
-    def change(self, contact):
-        wd = self.app.wd
-        self.open_home_page()
-        self.select_first_contact()
-        self.fill_contact_form(contact)
-        self.return_to_home_page()
-
     def fill_contact_form(self, contact):
         wd = self.app.wd
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()

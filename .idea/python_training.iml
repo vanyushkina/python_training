@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.6.3 virtualenv at E:\GitHub\python_training\env" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="python_training_2" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

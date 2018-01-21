@@ -5,8 +5,7 @@ class ContactHelper:
 
     def return_to_home_page(self):
         wd = self.app.wd
-        if not wd.current_url.endswith(" "):
-            wd.find_element_by_link_text("home").click()
+        wd.find_element_by_link_text("home").click()
 
     def create(self, contact):
         wd = self.app.wd
@@ -65,7 +64,3 @@ class ContactHelper:
         wd = self.app.wd
         wd.get("http://localhost/addressbook/")
 
-    def count(self):
-        wd = self.app.wd
-        self.open_home_page()
-        return len(wd.find_element_by_name("selected[]"))

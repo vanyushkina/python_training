@@ -63,3 +63,4 @@ class ContactHelper:
     def open_home_page(self):
         wd = self.app.wd
         wd.get("http://localhost/addressbook/")
+
